@@ -8,15 +8,23 @@
 //Tuple struct
 // struct Color(u8,u8,u8);
 
-struct Person1{
-    name : String,
-    age: u8
+// struct Person1{
+//     name : String,
+//     age: u8,
+//     mothers_name: String,
+// }
+struct Person1 {
+    name: String,
+    age: u8,
+    mothers_name: String,
 }
+
 
 fn create_person(name: String , age :u8){
  let person = Person1{
   name,
   age,
+  
  };   
 }
 struct Person {
@@ -59,9 +67,17 @@ pub fn run() {
 
     // let mut c = Color(255,0,0);
     // println!("color: {} {} {} ",c.0,c.1,c.2);
-    let person = Person1{
+    let person = Person1 {
         name: "Nour".to_string(),
-        age:30
+        age: 30,
+        mothers_name: "Jane".to_string(),  // Make sure this field is included
+    };
+
+    let person2 =Person1{
+        name: "DOE".to_string(),
+       ..person
+        //age:  person.age,
+
     };
    println!("{} is {} years old",person.name,person.age);
     let mut p = Person::new("Marry", "Doe");
