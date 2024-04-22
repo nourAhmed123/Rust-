@@ -13,11 +13,34 @@
 //     age: u8,
 //     mothers_name: String,
 // }
+
+#[derive(Debug)] //Debug trait
+
+struct Point(f64,f64,f64);
+
+impl Point {
+    fn make_twice(&mut self){
+        self.0 *=2.0;
+        self.1 *=2.0;
+        self.2 *=2.0;
+} 
+fn twice(&self)->Point{
+    Point(self.0*2.0,self.1*2.0,self.2*2.0)
+}
+fn describe(&self){
+    println!("Point is at ({},{},{})",self.0,self.1,self.2)
+}
+}
+
 struct Person1 {
     name: String,
     age: u8,
-    mothers_name: String,
+    //mothers_name: String,
 }
+
+
+
+
 
 
 fn create_person(name: String , age :u8){
@@ -32,6 +55,7 @@ struct Person {
     last_name: String,
 
 }
+
 
 impl Person {
     //construct person
@@ -70,7 +94,7 @@ pub fn run() {
     let person = Person1 {
         name: "Nour".to_string(),
         age: 30,
-        mothers_name: "Jane".to_string(),  // Make sure this field is included
+        //mothers_name: "Jane".to_string(),  // Make sure this field is included
     };
 
     let person2 =Person1{
@@ -85,4 +109,11 @@ pub fn run() {
     println!("person{}", p.full_name());
     println!("person Tuple{:?}", p.to_tuple());
     //println!("person {} {}", p.first_name, p.last_name);
+    let p = Point(1.0,2.0,3.0);
+    println!("{:?}",p);
+    p.describe();
+    let mut point = Point(1.0,2.0,3.0);
+    let twice = point.twice();
+    point.make_twice();
+
 }
