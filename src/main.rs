@@ -9,7 +9,7 @@ mod error_handling;
 //mod conditionals;
 //mod hashmap;
 //mod iterators;
-mod lifetimes;
+//mod lifetimes;
 //mod loops;
 //mod optionals;
 //mod functions;
@@ -18,6 +18,7 @@ mod lifetimes;
 //mod ownership_example;
 //mod enums;
 //mod cli;
+mod traits;
 fn main() {
 //print::run();
 //vars::run();
@@ -29,7 +30,7 @@ fn main() {
 //conditionals::run();
 //hashmap::run();
 //iterators::run();
-lifetimes::run();
+//lifetimes::run();
 //loops::run();
 //optionals::run();
 //functions::run();
@@ -39,4 +40,5 @@ lifetimes::run();
 //enums::run();
 //cli::run();
 //error_handling::run();
+traits::run();
 }
