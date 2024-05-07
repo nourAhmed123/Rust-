@@ -1,10 +1,11 @@
+//mod arrays;
 //mod error_handling;
 //mod print;
 //mod vars;
 //mod types;
 //mod strings;
 //mod tuples;
-//mod arrays;
+mod generics;
 //mod vectors;
 //mod conditionals;
 //mod hashmap;
@@ -14,19 +15,20 @@
 //mod optionals;
 //mod functions;
 //mod pointer_ref;
-mod pointer;
+//mod pointer;
 //mod structs;
 //mod ownership_example;
 //mod enums;
 //mod cli;
 //mod traits;
 fn main() {
+    //arrays::run();
 //print::run();
 //vars::run();
 //types::run();
 //strings::run();
 //tuples::run();
-//arrays::run();
+generics :: run();
 //vectors::run();
 //conditionals::run();
 //hashmap::run();
@@ -36,7 +38,7 @@ fn main() {
 //optionals::run();
 //functions::run();
 //pointer_ref::run();
-pointer::run();
+//pointer::run();
 //structs::run();
 //ownership_example::run();
 //enums::run();
