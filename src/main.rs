@@ -1,11 +1,12 @@
 //mod arrays;
+mod asynchronus;
 //mod error_handling;
 //mod print;
 //mod vars;
 //mod types;
 //mod strings;
 //mod tuples;
-mod generics;
+//mod generics;
 //mod vectors;
 //mod conditionals;
 //mod hashmap;
@@ -23,12 +24,13 @@ mod generics;
 //mod traits;
 fn main() {
     //arrays::run();
+    asynchronus::run();
 //print::run();
 //vars::run();
 //types::run();
 //strings::run();
 //tuples::run();
-generics :: run();
+//generics :: run();
 //vectors::run();
 //conditionals::run();
 //hashmap::run();

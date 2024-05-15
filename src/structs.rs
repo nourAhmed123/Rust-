@@ -16,20 +16,22 @@
 
 #[derive(Debug)] //Debug trait
 
-struct Point(f64,f64,f64);
+struct Point(f64, f64, f64);
 
 impl Point {
-    fn make_twice(&mut self){
-        self.0 *=2.0;
-        self.1 *=2.0;
-        self.2 *=2.0;
-} 
-fn twice(&self)->Point{
-    Point(self.0*2.0,self.1*2.0,self.2*2.0)
-}
-fn describe(&self){
-    println!("Point is at ({},{},{})",self.0,self.1,self.2)
-}
+    fn make_twice(&mut self) {
+        // Method to double the values of the point
+        self.0 *= 2.0;
+        self.1 *= 2.0;
+        self.2 *= 2.0;
+    }
+    fn twice(&self) -> Point {
+        // Method to return a new Point with doubled values
+        Point(self.0 * 2.0, self.1 * 2.0, self.2 * 2.0)
+    } // Method to print the point's coordinates
+    fn describe(&self) {
+        println!("Point is at ({},{},{})", self.0, self.1, self.2)
+    }
 }
 
 struct Person1 {
@@ -38,24 +40,13 @@ struct Person1 {
     //mothers_name: String,
 }
 
-
-
-
-
-
-fn create_person(name: String , age :u8){
- let person = Person1{
-  name,
-  age,
-  
- };   
+fn create_person(name: String, age: u8) {
+    let person = Person1 { name, age };
 }
 struct Person {
     first_name: String,
     last_name: String,
-
 }
-
 
 impl Person {
     //construct person
@@ -97,23 +88,20 @@ pub fn run() {
         //mothers_name: "Jane".to_string(),  // Make sure this field is included
     };
 
-    let person2 =Person1{
+    let person2 = Person1 {
         name: "DOE".to_string(),
-       ..person
-        //age:  person.age,
-
+        ..person //age:  person.age,
     };
-   println!("{} is {} years old",person.name,person.age);
+    println!("{} is {} years old", person.name, person.age);
     let mut p = Person::new("Marry", "Doe");
     p.set_last_name("williams");
     println!("person{}", p.full_name());
     println!("person Tuple{:?}", p.to_tuple());
     //println!("person {} {}", p.first_name, p.last_name);
-    let p = Point(1.0,2.0,3.0);
-    println!("{:?}",p);
+    let p = Point(1.0, 2.0, 3.0);
+    println!("{:?}", p);
     p.describe();
-    let mut point = Point(1.0,2.0,3.0);
+    let mut point = Point(1.0, 2.0, 3.0);
     let twice = point.twice();
     point.make_twice();
-
 }
